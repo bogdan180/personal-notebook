@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Персональний нотатник</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Персональний нотатник</h1>
+            <p>Місце для моїх думок та ідей.</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Нова нотатка</h2>
+
+                <form id="note-form" novalidate>
+                    <label for="note-title">Заголовок</label>
+                    <input
+                        type="text"
+                        id="note-title"
+                        name="title"
+                        placeholder="Наприклад: Ідеї на вихідні"
+                        required
+                    >
+
+                    <label for="note-text">Текст нотатки</label>
+                    <textarea
+                        maxlength="1000"
+                        id="note-text"
+                        name="text"
+                        rows="5"
+                        placeholder="Напиши свою нотатку..."
+                        required
+                    ></textarea>
+                    <p id="text-counter" class="text-counter" aria-live="polite">
+                        0 / 1000 символів
+                    </p>
+
+                    <label for="note-date">Дата</label>
+                    <input
+                        type="date"
+                        id="note-date"
+                        name="date"
+                        required
+                    >
+
+                    <label for="note-tags">Теги через кому</label>
+                    <input
+                        type="text"
+                        id="note-tags"
+                        name="tags"
+                        placeholder="навчання, ідеї"
+                    >
+
+                    <p id="form-error" class="form-error" role="alert"></p>
+
+                    <button type="submit">Додати нотатку</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Мої нотатки</h2>
+
+                <label for="note-search">Пошук нотаток</label>
+                <input
+                    type="search"
+                    id="note-search"
+                    placeholder="Введи слово або фразу"
+                >
+
+                <label for="note-sort">Порядок нотаток</label>
+                <select id="note-sort">
+                    <option value="newest">Спочатку новіші</option>
+                    <option value="oldest">Спочатку старіші</option>
+                </select>
+                <div id="tag-filters" class="tag-filters" aria-label="Фільтр за тегами"></div>
+
+                <div id="notes-list"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Лабораторна робота №1 · Варіант 20</p>
+        </footer>
+        
+        <script src="app.js"></script>
+    </body>
+</html>

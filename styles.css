@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+header {
+    padding: 24px;
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+footer {
+    padding: 16px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+#notes-list {
+    display: grid;
+    gap: 16px;
+}
+
+.note-card {
+    padding: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.note-card h3 {
+    margin: 0 0 8px;
+}
+
+.note-card time {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.note-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.note-tags {
+    color: #2563eb;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+.note-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.text-counter {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    text-align: right;
+}
+
+.text-counter.counter-warning {
+    color: #b45309;
+    font-weight: bold;
+}
+
+.invalid {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.form-error {
+    margin: 0;
+    color: #dc2626;
+}
+
+.form-error:empty {
+    display: none;
+}
+
+#note-search {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 8px 0 20px;
+}
+
+.note-card mark {
+    background-color: #fde68a;
+    color: inherit;
+    border-radius: 3px;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag-filter {
+    padding: 8px 12px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.tag-filter:hover {
+    background-color: #d1d5db;
+}
+
+.tag-filter.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+#note-sort {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 8px 0 20px;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    background-color: white;
+    font: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select {
+    min-width: 0;
+}
+
+.note-card,
+.note-card h3,
+.note-tags,
+.tag-filter {
+    overflow-wrap: anywhere;
+}
+
+.tag-filter {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 16px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        margin: 16px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .note-actions {
+        gap: 8px;
+    }
+}
+
+.empty-message {
+    margin: 0;
+    padding: 20px 0;
+    color: #6b7280;
+    text-align: center;
+}
